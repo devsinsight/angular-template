@@ -1,0 +1,23 @@
+[ 
+    {   
+        "productId": 1, 
+        "productName": "Garden Cart", 
+        "productCode": "GDN-0023", 
+        "releaseDate": "October 15, 2017",
+        "description": "15 gallon capacity rolling", 
+        "price": 32.99, 
+        "starRating": 4.2,
+        "imageUrl": "https://openclipart.org/image/50px/svg_to_png/58471/garden-cart.png&disposition=attachment"
+    },
+    {
+        "productId": 2, 
+        "productName": "Hammer", 
+        "productCode": "TBX-0048", 
+        "releaseDate": "October 15, 2017",
+        "description": "Curved claw steel hammer", 
+        "price": 32.99, 
+        "starRating": 2.2,
+        "imageUrl": "https://openclipart.org/image/50px/svg_to_png/73/rejon-Hammer.png&disposition=attachment"
+
+    }
+]
