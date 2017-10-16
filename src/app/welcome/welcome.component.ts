@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'welcome',
+    selector: 'app-welcome',
     templateUrl: 'welcome.component.html',
     styleUrls: ['welcome.component.scss']
 })

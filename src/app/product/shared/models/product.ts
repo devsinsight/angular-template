@@ -1,4 +1,3 @@
-
 interface IProduct {
     productId: number;
     productName: string;
@@ -12,7 +11,6 @@ interface IProduct {
 }
 
 export class Product implements IProduct {
-    
     constructor(
         public productId: number,
         public productName: string,
@@ -21,12 +19,11 @@ export class Product implements IProduct {
         public description: string,
         public price: number,
         public starRating: number,
-        public imageUrl: string){
-
-    }
+        public imageUrl: string) {}
 
     calculateDiscount(percent: number): number {
         return this.price - (this.price * percent / 100);
     }
-    
+
 }
+

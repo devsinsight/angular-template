@@ -20,7 +20,7 @@ import { ProductRouting } from 'app/product/product.routing';
     ProductRouting
   ],
   providers: [
-    ProductService, 
+    ProductService,
     ProductGuardService
   ]
 })
