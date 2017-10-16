@@ -25,11 +25,4 @@ export class ProductService {
         return Observable.throw(err.message);
     }
 
-    /*getProducts(): Product[] {
-        return [
-            new Product(1, 'Garden Cart', 'GDN-0023', 'October 15, 2017', '15 gallon capacity rolling', 32.99, 4.2, 'https://openclipart.org/image/50px/svg_to_png/58471/garden-cart.png&disposition=attachment'),
-            new Product(2, 'Hammer', 'TBX-0048', 'October 15, 2017', 'Curved claw steel hammer', 9.8, 4.8, 'https://openclipart.org/image/50px/svg_to_png/73/rejon-Hammer.png&disposition=attachment')
-        ];
-    }
-    */
 }

@@ -37,7 +37,11 @@
                                      [title]="product.productName | uppercase"
                                      *ngIf="showImage"/>
                             </td>
-                            <td>{{product.productName}}</td>
+                            <td>
+                                <a [routerLink]="['/products', product.productId]">
+                                    {{product.productName}}
+                                </a>
+                            </td>
                             <td>{{product.productCode | convertToSpace:'-' | uppercase}}</td>
                             <td>{{product.releaseDate}}</td>
                             <td>{{product.price | currency:'USD': true:'1.2-2' | lowercase}}</td>
