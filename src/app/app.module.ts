@@ -1,3 +1,4 @@
+import { EmployeeModule } from './employee/employee.module';
 import { ProductModule } from './product/product.module';
 import { ProductGuardService } from './product/shared/services/product-guard.service';
 
@@ -21,6 +22,7 @@ import { AppRouting } from 'app/app.routing';
     BrowserModule,
     HttpClientModule,
     ProductModule,
+    EmployeeModule,
     AppRouting
   ],
   bootstrap: [AppComponent]

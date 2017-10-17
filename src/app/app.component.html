@@ -16,6 +16,9 @@
         <li [routerLinkActive]="'active'">
           <a [routerLink]="['/products']">Product List</a>
         </li>
+        <li [routerLinkActive]="'active'">
+            <a [routerLink]="['/employee']">Employee</a>
+          </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -28,10 +31,9 @@
 </nav>
 
 
-<div class="container">
-  <h1>{{title}}</h1>
+<main class="container">
   <router-outlet></router-outlet>
-</div>
+</main>
 
 <footer class="footer">
   <p>Powered by: José Luis Olivares Rojas</p>

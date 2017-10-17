@@ -8,12 +8,14 @@ import { ProductGuardService } from 'app/product/shared/services/product-guard.s
 import { ConvertToSpacesPipe } from 'app/product/shared/pipes/convert-to-space.pipe';
 import { SharedModule } from 'app/shared/shared.module';
 import { ProductRouting } from 'app/product/product.routing';
+import { ProductComponent } from './product.component';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ConvertToSpacesPipe
+    ConvertToSpacesPipe,
+    ProductComponent
   ],
   imports: [
     SharedModule,
