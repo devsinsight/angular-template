@@ -1,6 +1,19 @@
 <div class="panel panel-primary" *ngIf="product">
     <div class="panel-heading">
-        {{pageTitle + " : " + product?.productName}}
+        {{pageTitle + " : " + product?.name}}
+    </div>
+    <div class="panel-body">
+        <span>ID: {{product.id}}</span>
+        <br>
+        <span>CODE: {{product.code}}</span>
+        <br>
+        <span>NAME: {{product.name}}</span>
+        <br>
+        <span>DESCRIPTION: {{product.description}}</span>
+        <br>
+        <span>PRICE: {{product.price | currency:'USD'}}</span>
+        <br>
+        <span>STARS: <app-stars [rating]="product.star_rating"></app-stars></span>
     </div>
     <div class="panel-footer">
         <a class="btn btn-default" (click)="goBack()">

@@ -1,25 +1,25 @@
 interface IProduct {
-    productId: number;
-    productName: string;
-    productCode: string;
-    releaseDate: string;
+    id: number;
+    name: string;
+    code: string;
+    release_date: string;
     price: number;
     description: string;
-    starRating: number;
-    imageUrl: string;
+    star_rating: number;
+    image_url: string;
     calculateDiscount(percent: number): number;
 }
 
 export class Product implements IProduct {
     constructor(
-        public productId: number,
-        public productName: string,
-        public productCode: string,
-        public releaseDate: string,
+        public id: number,
+        public name: string,
+        public code: string,
+        public release_date: string,
         public description: string,
         public price: number,
-        public starRating: number,
-        public imageUrl: string) {}
+        public star_rating: number,
+        public image_url: string) {}
 
     calculateDiscount(percent: number): number {
         return this.price - (this.price * percent / 100);

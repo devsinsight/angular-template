@@ -40,20 +40,20 @@
                     <tbody>
                         <tr *ngFor="let product of filteredProducts">
                             <td>
-                                <img [src]="product.imageUrl"
-                                     [title]="product.productName | uppercase"
+                                <img [src]="product.image_url"
+                                     [title]="product.name | uppercase"
                                      *ngIf="showImage"/>
                             </td>
                             <td>
-                                <a [routerLink]="['/products', product.productId]">
-                                    {{product.productName}}
+                                <a [routerLink]="['/products', product.id]">
+                                    {{product.name}}
                                 </a>
                             </td>
-                            <td>{{product.productCode | convertToSpace:'-' | uppercase}}</td>
-                            <td>{{product.releaseDate}}</td>
+                            <td>{{product.code | convertToSpace:'-' | uppercase}}</td>
+                            <td>{{product.release_date}}</td>
                             <td>{{product.price | currency:'USD': true:'1.2-2' | lowercase}}</td>
                             <td>
-                                <app-stars [rating]="product.starRating"
+                                <app-stars [rating]="product.star_rating"
                                         (notify)='onNotify($event)'></app-stars>
                             </td>
                         </tr>

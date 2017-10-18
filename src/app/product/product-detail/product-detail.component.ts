@@ -1,6 +1,7 @@
 import { Product } from './../shared/models/product';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from 'app/product/shared/services/product.service';
 
 @Component({
     moduleId: module.id,
@@ -11,20 +12,17 @@ export class ProductDetailComponent implements OnInit {
     pageTitle = 'Product Detail';
     product: Product;
 
-    constructor(private route: ActivatedRoute, private router: Router) {}
+    constructor(private route: ActivatedRoute, private router: Router, private service: ProductService) {}
 
     ngOnInit(): void {
         const id = +this.route.snapshot.paramMap.get('id');
         this.pageTitle += `: ${id}`
-        this.product = new Product(
-             id,
-            'Leaf Rake',
-            'GDN-0011',
-            'March 19, 2016',
-            'Leaf rake with 48-inch wooden handle.',
-             19.95,
-             3.2,
-             'https://openclipart.org/image/50px/svg_to_png/26215/Anonymous_Leaf_Rake.png&disposition=attachment')
+
+        this.service.getProductDetail(id)
+            .subscribe((product: Product) => {
+                this.product = product;
+        });
+
     }
 
     goBack(): void {
