@@ -1,3 +1,4 @@
+import { EmployeeService } from './employee/shared/services/employee.service';
 import { EmployeeModule } from './employee/employee.module';
 import { ProductModule } from './product/product.module';
 import { ProductGuardService } from './product/shared/services/product-guard.service';

@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { EmployeeComponent } from './employee.component';
 import { EmployeeRouting } from 'app/employee/employee.routing';
 import { SharedModule } from 'app/shared/shared.module';
+import { EmployeeService } from 'app/employee/shared/services/employee.service';
+import { LanguageService } from 'app/employee/shared/services/language.service';
 
 @NgModule({
     imports: [
@@ -16,8 +18,10 @@ import { SharedModule } from 'app/shared/shared.module';
     ],
     exports: [
         EmployeeComponent,
-    ]
+    ],
+    providers: [
+        EmployeeService,
+        LanguageService
+    ],
 })
-export class EmployeeModule {
-
-}
+export class EmployeeModule {}

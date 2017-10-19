@@ -1,7 +1,8 @@
 <div class="container">
     <h3>Product Form</h3>
     <form #form="ngForm"
-        novalidate>
+        novalidate
+        (submit)="save(form)">
 
         <div class="form-group"
             [class.has-error]="firstName.invalid && firstName.touched">
@@ -13,7 +14,7 @@
                 class="form-control"
                 placeholder="First Name"
                 name="firstName"
-                [(ngModel)]="model.firstName" />
+                [(ngModel)]="model.first_name" />
             <div *ngIf="firstName.invalid && firstName.touched"
                 class="alert alert-danger">
                 First Name is required.
@@ -31,7 +32,7 @@
                 required
                 autocomplete="off"
                 #lastName="ngModel"
-                [(ngModel)]="model.lastName" />
+                [(ngModel)]="model.last_name" />
             <div *ngIf="lastName.invalid && lastName.touched"
                 class="alert alert-danger">
                 Last Name is required.
@@ -40,19 +41,19 @@
 
         <div class="checkbox">
             <label>
-        <input type="checkbox" name="is-full-time" [(ngModel)]="model.isFullTime" /> Full Time Employee
+        <input type="checkbox" name="is-full-time" [(ngModel)]="model.is_full_time" /> Full Time Employee
       </label>
         </div>
 
         <label>Payment Type</label>
         <div class="radio">
             <label>
-        <input type="radio" name="paymentType" value="w2" [(ngModel)]="model.paymentType" /> w2
+        <input type="radio" name="paymentType" value="w2" [(ngModel)]="model.payment_type" /> w2
       </label>
         </div>
         <div class="radio">
             <label>
-        <input type="radio" name="paymentType" value="1099" [(ngModel)]="model.paymentType" /> 1099
+        <input type="radio" name="paymentType" value="1099" [(ngModel)]="model.payment_type" /> 1099
       </label>
         </div>
 
@@ -64,7 +65,7 @@
                 #primaryLanguage
                 (blur)="validatePrimaryLanguage(primaryLanguage.value)"
                 (change)="validatePrimaryLanguage(primaryLanguage.value)"
-                [(ngModel)]="model.primaryLanguage">
+                [(ngModel)]="model.primary_language">
                 <option value="">Select a Language...</option>
                 <option *ngFor="let language of languages">
                   {{ language }}
@@ -80,7 +81,6 @@
 
         <button type="submit"
             class="btn btn-primary"
-            [disabled]="form.invalid || this.model.primaryLanguage === ''">Ok</button>
-        <h3>{{ form.valid }}</h3>
+            [disabled]="form.invalid || this.model.primary_language === ''">Ok</button>
     </form>
 </div>

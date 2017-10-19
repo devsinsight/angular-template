@@ -3,17 +3,17 @@
         {{pageTitle + " : " + product?.name}}
     </div>
     <div class="panel-body">
-        <span>ID: {{product.id}}</span>
+        <span><strong>ID</strong> {{product.id}}</span>
         <br>
-        <span>CODE: {{product.code}}</span>
+        <span><strong>CODE:</strong> {{product.code}}</span>
         <br>
-        <span>NAME: {{product.name}}</span>
+        <span><strong>NAME:</strong> {{product.name}}</span>
         <br>
-        <span>DESCRIPTION: {{product.description}}</span>
+        <span><strong>DESCRIPTION:</strong> {{product.description}}</span>
         <br>
-        <span>PRICE: {{product.price | currency:'USD'}}</span>
+        <span><strong>PRICE:</strong> {{product.price | currency:'USD'}}</span>
         <br>
-        <span>STARS: <app-stars [rating]="product.star_rating"></app-stars></span>
+        <span><strong>STARS:</strong> <app-stars [rating]="product.star_rating"></app-stars></span>
     </div>
     <div class="panel-footer">
         <a class="btn btn-default" (click)="goBack()">
