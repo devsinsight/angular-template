@@ -5,10 +5,15 @@ import { CommonModule } from '@angular/common';
 
 // This Module's Components
 import { StarComponent } from 'app/shared/star/star.component';
+import { BsDatepickerModule, RatingModule  } from 'ngx-bootstrap';
+import { ButtonsModule } from 'ngx-bootstrap';
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        BsDatepickerModule.forRoot(),
+        RatingModule.forRoot(),
+        ButtonsModule.forRoot()
     ],
     declarations: [
         StarComponent
@@ -16,7 +21,10 @@ import { StarComponent } from 'app/shared/star/star.component';
     exports: [
         StarComponent,
         CommonModule,
-        FormsModule
+        FormsModule,
+        BsDatepickerModule,
+        RatingModule,
+        ButtonsModule
     ]
 })
 export class SharedModule {

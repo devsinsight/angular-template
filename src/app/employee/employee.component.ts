@@ -13,7 +13,7 @@ import { LanguageService } from 'app/employee/shared/services/language.service';
 export class EmployeeComponent implements OnInit {
 
     languages = ['English', 'Spanish', 'Other'];
-    model = new Employee('', '', true, '', '');
+    model = new Employee('', '', true, 'w2', '', null);
     hasPrimaryLanguageError = false;
 
     constructor(private service: EmployeeService, private languageService: LanguageService) {}
@@ -31,4 +31,5 @@ export class EmployeeComponent implements OnInit {
     validatePrimaryLanguage(event: string): void {
         this.hasPrimaryLanguageError = this.model.primary_language === '';
     }
+
 }

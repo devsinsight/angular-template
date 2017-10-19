@@ -53,8 +53,7 @@
                             <td>{{product.release_date}}</td>
                             <td>{{product.price | currency:'USD': true:'1.2-2' | lowercase}}</td>
                             <td>
-                                <app-stars [rating]="product.star_rating"
-                                        (notify)='onNotify($event)'></app-stars>
+                                <rating [(ngModel)]="product.star_rating" [max]="5" [readonly]="true"></rating>
                             </td>
                         </tr>
                     </tbody>
